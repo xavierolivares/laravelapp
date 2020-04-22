@@ -22,3 +22,13 @@ Route::get('/', function () {
     ];
     return view('welcome', compact('tasks', 'name'));
 });
+
+Route::get('/about', function () {
+    $name = 'Jungle';
+    $tasks = [
+        'Go to the store',
+        'Finish my screencast',
+        'Clean the house'
+    ];
+    return view('about', compact('tasks', 'name'));
+});

@@ -19,13 +19,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Home</title>
+        <title>About</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
-        <!-- <style>
+        <style>
             html, body {
                 background-color: #fff;
                 color: #FFFFFF;
@@ -33,8 +33,7 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
-                background-image: url('https://img5.goodfon.com/wallpaper/nbig/1/45/citrus-oranges-fruits.jpg');
-                background-size: cover;
+                background-image: url('https://images.shcdn.de/resized/w750/p/baumwolljersey-micro-streifenliebe-tuerkis--_11807-024_2.jpg');
             }
 
             .full-height {
@@ -78,7 +77,7 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-        </style> -->
+        </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -98,9 +97,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Home
+                    About
                 </div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/fHI8X4OXluQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
