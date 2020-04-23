@@ -39,6 +39,10 @@
             overflow: hidden;
             background-color: #333;
             position: relative;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
+            10px 10px 15px rgba(0,0,0,0.5),
+            -1px -1px 30px rgba(0,0,0,0.2);
             }
 
             /* Hide the links inside the navigation menu (except for logo/home) */
@@ -83,8 +87,8 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
-                background-image: url('https://img5.goodfon.com/wallpaper/nbig/1/45/citrus-oranges-fruits.jpg');
-                background-size: cover;
+                /* background-image: url('https://img5.goodfon.com/wallpaper/nbig/1/45/citrus-oranges-fruits.jpg');
+                background-size: cover; */
             }
 
             .full-height {
@@ -133,6 +137,7 @@
     <body>
         <div class="topnav">
             <a id="home" href="/" class="active">freelancingweb.dev</a>
+            <!-- <img src="https://pngimage.net/wp-content/uploads/2018/06/orange-icon-png-3.png"> -->
             <!-- Navigation links (hidden by default) -->
             <div id="myLinks">
                 <a href="/">News</a>
