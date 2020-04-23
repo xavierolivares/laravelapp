@@ -17,15 +17,22 @@
                     x.style.display = "block";
                 }
             }
+
+            function topNavShutoff() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                }
+            }
         </script>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
         <!-- Styles -->
         <style>
-            #home {
+            /* #home {
             font-family: 'Niconne', cursive;
-            }
+            } */
 
             /* Style the navigation menu */
             .topnav {
@@ -137,7 +144,7 @@
             <i class="fa fa-bars"></i>
             </a>
         </div>
-        <div class="flex-center position-ref full-height">
+        <div class="flex-center position-ref full-height" onclick="topNavShutoff()">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
