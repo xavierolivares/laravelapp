@@ -1,18 +1,3 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-    <h1>Welcome to the <?= $name; ?></h1>
-    <ul>
-    @foreach ($tasks as $task)
-        <li>{{ $task }}</li>
-    @endforeach
-    </ul>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -20,12 +5,70 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Home</title>
-
+        <!-- Hamburger Menu -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Hamburger Functionality -->
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
         <!-- Styles -->
-        <!-- <style>
+        <style>
+            #home {
+            font-family: 'Niconne', cursive;
+            }
+
+            /* Style the navigation menu */
+            .topnav {
+            overflow: hidden;
+            background-color: #333;
+            position: relative;
+            }
+
+            /* Hide the links inside the navigation menu (except for logo/home) */
+            .topnav #myLinks {
+            display: none;
+            }
+
+            /* Style navigation menu links */
+            .topnav a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 30px;
+            display: block;
+            }
+
+            /* Style the hamburger menu */
+            .topnav a.icon {
+            background: black;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            }
+
+            /* Add a grey background color on mouse-over */
+            .topnav a:hover {
+            background-color: white;
+            color: #FF8C00;
+            }
+
+            /* Style the active link (or home/logo) */
+            .active {
+            background-color: #FF8C00;
+            color: white;
+            }
+
             html, body {
                 background-color: #fff;
                 color: #FFFFFF;
@@ -42,7 +85,7 @@
             }
 
             .flex-center {
-                align-items: center;
+                /* align-items: center; */
                 display: flex;
                 justify-content: center;
             }
@@ -78,9 +121,22 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-        </style> -->
+        </style>
     </head>
     <body>
+        <div class="topnav">
+            <a id="home" href="/" class="active">freelancingweb.dev</a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="/">News</a>
+                <a href="/">Contact</a>
+                <a href="/">About</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+        </div>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -100,7 +156,6 @@
                 <div class="title m-b-md">
                     Home
                 </div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/fHI8X4OXluQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
