@@ -14,13 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $name = 'Jungle';
-    $tasks = [
-        'Go to the store',
-        'Finish my screencast',
-        'Clean the house'
-    ];
-    return view('welcome', compact('tasks', 'name'));
+    return view('home');
 });
 
 Route::get('/about', function () {
@@ -31,4 +25,8 @@ Route::get('/about', function () {
         'Clean the house'
     ];
     return view('about', compact('tasks', 'name'));
+});
+
+Route::get('/contact', function () {
+    return view('contact');
 });
