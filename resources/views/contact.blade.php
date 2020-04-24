@@ -1,6 +1,6 @@
 @extends('master')
+@section('title', 'Contact')
 
-@section('title', 'Contact Form')
 @section('content')
     <style>
         label {
@@ -8,22 +8,27 @@
             margin-top:20px;
             letter-spacing:2px;
         }
+        
         /* Centre the page */
         .body {
             display:block;
             margin:0 auto;
-            width:576px;
+            width: auto;
         }
 
         /* Centre the form within the page */
         form {
             margin:0 auto;
-            width:459px;
+            width: auto;
+        }
+
+        form h3, label {
+            color: #FF7F50;
         }
 
         /* Style the text boxes */
         input, textarea {
-            width:439px;
+            width:500px;
             height:27px;
             background:#efefef;
             border:1px solid #dedede;
@@ -35,10 +40,44 @@
             -webkit-border-radius:5px;
             border-radius:5px;
         }
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            input, textarea {
+                width:150px;
+            }
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            input, textarea {
+                width:250px;
+            }
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            input, textarea {
+                width:350px;
+            }
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            input, textarea {
+                width:450px;
+            }
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            input, textarea {
+                width:600px;
+            }
+        }
 
         textarea {
             height:213px;
-            background:url(images/textarea-bg.jpg) right no-repeat #efefef;
+            /* background:url(images/textarea-bg.jpg) right no-repeat #efefef; */
         }
         input:focus, textarea:focus {
             border:1px solid #97d6eb;
@@ -47,43 +86,78 @@
             width:127px;
             height:38px;
             /* background:url(https://www.freepngimg.com/thumb/submit_button/25432-3-submit-button-file-thumb.png); */
-            background-color:orange;
+            background-color:#FF7F50;
             color: #FFFFFF;
             /* text-indent:-9999px; */
             border:none;
             margin-top:20px;
             cursor:pointer;
+            box-shadow: -1px -1px 30px rgba(0,0,0,0.5), 2px 2px 5px rgba(0,0,0,0.5),
+            10px 10px 15px rgba(0,0,0,0.5),
+            -1px -1px 30px rgba(0,0,0,0.2);
         }
-	    #submit:hover {
-	        opacity:.9;
-	    }
+        #submit:hover {
+            opacity:.9;
+        }
     </style>
-    <header class="body">
-    </header>
-
-    <section class="body">
-        <h1>Contact Me</h1>
-        <form method="post" action="{{url('/contact')}}">
-            <label>Name</label>
-            <input name="name" placeholder="Type Here">
-                    
-            <label>Email</label>
-            <input name="email" type="email" placeholder="Type Here">
-                    
-            <label>Message</label>
-            <textarea name="message" placeholder="Type Here"></textarea>
-            
-            <label>*What is 2+2? (Anti-spam)</label>
-            <input name="human" placeholder="Type Here">
-
-            <input id="submit" name="submit" type="submit" value="Submit">               
-        </form>
-
-    </section>
-
-    <footer class="body">
-    </footer>
+    @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+    @endif
+    @if (session('warning'))
+        <div class="alert alert-warning">
+            {{ session('warning') }}
+        </div>
+    @endif
+<section class="body">                       
+    <form method="post" action="{{ route('contactus.store') }}">
+        {{ csrf_field() }}
+        <h3>Contact</h3>
+        <div>
+            <div>
+                <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
+                    <label>Name</label>
+                    <input type="text" name="name" class="form-control" placeholder="Your Name *"  required />
+                    @if ($errors->has('name'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('name') }}</strong>
+                        </span>
+                    @endif
+                </div>
+                <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
+                    <label>Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Your Email *"  required />
+                        @if ($errors->has('email'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                        @endif
+                </div>
+                <div class="form-group {{ $errors->has('subject') ? ' has-error' : '' }}">
+                    <label>Subject</label>
+                    <input type="text" name="subject" class="form-control" placeholder="Subject *"  />
+                    @if ($errors->has('subject'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('subject') }}</strong>
+                        </span>
+                    @endif
+                </div>
+            </div>
+            <div>
+                <div class="form-group {{ $errors->has('message') ? ' has-error' : '' }}">
+                    <label>Message</label>
+                    <textarea name="message" class="form-control" placeholder="Your Message *" required></textarea>
+                    @if ($errors->has('message'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('message') }}</strong>
+                        </span>
+                    @endif
+                </div>
+            </div>
+            <div class="form-group">
+                <input id="submit" type="submit" name="btnSubmit" class="btn btn-primary btn-round btn-sm" value="Send Message" />  
+            </div>
+        </div>
+    </form>
 @endsection
-
-<!-- Reference - http://tangledindesign.com/how-to-create-a-contact-form-using-html5-css3-and-php/ -->
-

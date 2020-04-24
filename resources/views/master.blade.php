@@ -31,16 +31,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
         <!-- Styles -->
         <style>
-            /* #home {
-            font-family: 'Niconne', cursive;
-            } */
+            #home {
+            /* font-family: 'Niconne', cursive; */
+            /* text-transform: uppercase; */
+            }
 
             /* Style the navigation menu */
             .topnav {
             overflow: hidden;
             background-color: #333;
             position: relative;
-            /* border-radius: 0 0 10px 10px; */
+            border-radius: 0 0 10px 10px;
             box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
             10px 10px 15px rgba(0,0,0,0.5),
             -1px -1px 30px rgba(0,0,0,0.2);
@@ -56,7 +57,7 @@
             color: white;
             padding: 14px 16px;
             text-decoration: none;
-            font-size: 30px;
+            font-size: 20px;
             display: block;
             }
 
@@ -88,7 +89,7 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
-                background-image: url('https://img5.goodfon.com/wallpaper/nbig/1/45/citrus-oranges-fruits.jpg');
+                /* background-image: url('https://img5.goodfon.com/wallpaper/nbig/1/45/citrus-oranges-fruits.jpg'); */
                 background-size: cover;
             }
 
@@ -100,6 +101,7 @@
                 /* align-items: center; */
                 display: flex;
                 justify-content: center;
+                /* margin-top: 20px; */
             }
 
             .position-ref {
@@ -123,16 +125,26 @@
             .links > a {
                 color: #FFFFFF;
                 padding: 0 25px;
-                font-size: 13px;
+                font-size: 20px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
-                text-transform: uppercase;
-            }
+                /* text-transform: uppercase; */
+            } 
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }            
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #FF7F50;
+                color: white;
+                text-align: center;
+                border-radius: 10px 10px 0 0;
+                box-shadow: -1px -1px 30px rgba(0,0,0,0.5), 2px 2px 5px rgba(0,0,0,0.5),
+            10px 10px 15px rgba(0,0,0,0.5),
+            -1px -1px 30px rgba(0,0,0,0.2);
+            }
         </style>
     </head>
     <body>
@@ -141,9 +153,9 @@
             <!-- <img src="https://pngimage.net/wp-content/uploads/2018/06/orange-icon-png-3.png"> -->
             <!-- Navigation links (hidden by default) -->
             <div id="myLinks">
-                <a href="/">News</a>
-                <a href="/">Contact</a>
-                <a href="/">About</a>
+                <a href="/">Skills</a>
+                <a href="/contact">Contact</a>
+                <a href="/about">About</a>
             </div>
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -151,22 +163,18 @@
             </a>
         </div>
         <div class="flex-center position-ref full-height" onclick="topNavShutoff()">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
                 @yield('content')
+            </div>
+            <div class="footer links">
+                <a href="https://laravel.com/docs">Docs</a>
+                <a href="https://laracasts.com">Laracasts</a>
+                <a href="https://laravel-news.com">News</a>
+                <a href="https://blog.laravel.com">Blog</a>
+                <a href="https://nova.laravel.com">Nova</a>
+                <a href="https://forge.laravel.com">Forge</a>
+                <a href="https://vapor.laravel.com">Vapor</a>
+                <a href="https://github.com/laravel/laravel">GitHub</a>
             </div>
         </div>
     </body>
