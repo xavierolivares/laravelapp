@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Home</title>
+        <title>@yield('title')</title>
         <!-- Hamburger Menu -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Hamburger Functionality -->
@@ -131,7 +131,7 @@
 
             .m-b-md {
                 margin-bottom: 30px;
-            }
+            }            
         </style>
     </head>
     <body>
@@ -165,20 +165,7 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Home
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                @yield('content')
             </div>
         </div>
     </body>

@@ -30,3 +30,26 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::post('/contact', function () {
+    return view('contact');
+});
+
+Route::post('/contact', function (Request $request) {
+    $data = array(
+        'name' => $request->name,
+         'mail'=>$request->mail,
+          'message'=>$request->message
+    );
+
+    Mail::send('contact', $data, function ($message) use($request) {
+        $message->from($request->mail,$request->name);
+        $message->to('xm.olivares@gmail.com')->subject('Alt Support');
+    });
+
+    return "Your email has been sent successfully";
+});
+
+Route::get('contact-us', 'ContactUSController@contactUS');
+
+Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactSaveData']);
