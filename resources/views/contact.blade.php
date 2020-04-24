@@ -1,7 +1,6 @@
 @extends('master')
 
 @section('title', 'Contact Form')
-
 @section('content')
     <style>
         label {
