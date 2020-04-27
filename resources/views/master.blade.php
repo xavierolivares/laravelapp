@@ -57,8 +57,8 @@
             color: white;
             padding: 14px 16px;
             text-decoration: none;
-            font-size: 20px;
             display: block;
+            font-size:30px;
             }
 
             /* Style the hamburger menu */
@@ -125,7 +125,7 @@
             .links > a {
                 color: #FFFFFF;
                 padding: 0 25px;
-                font-size: 20px;
+                /* font-size: 20px; */
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -146,6 +146,7 @@
             -1px -1px 30px rgba(0,0,0,0.2);
             }
         </style>
+        @yield('style')
     </head>
     <body>
         <div class="topnav">
@@ -166,16 +167,16 @@
             <div class="content">
                 @yield('content')
             </div>
-            <div class="footer links">
-                <a href="https://laravel.com/docs">Docs</a>
-                <a href="https://laracasts.com">Laracasts</a>
-                <a href="https://laravel-news.com">News</a>
-                <a href="https://blog.laravel.com">Blog</a>
-                <a href="https://nova.laravel.com">Nova</a>
-                <a href="https://forge.laravel.com">Forge</a>
-                <a href="https://vapor.laravel.com">Vapor</a>
-                <a href="https://github.com/laravel/laravel">GitHub</a>
-            </div>
+        </div>
+        <div class="footer links">
+                        <a href="https://laravel.com/docs">Docs</a>
+                        <a href="https://laracasts.com">Laracasts</a>
+                        <a href="https://laravel-news.com">News</a>
+                        <a href="https://blog.laravel.com">Blog</a>
+                        <a href="https://nova.laravel.com">Nova</a>
+                        <a href="https://forge.laravel.com">Forge</a>
+                        <a href="https://vapor.laravel.com">Vapor</a>
+                        <a href="https://github.com/laravel/laravel">GitHub</a>
         </div>
     </body>
 </html>

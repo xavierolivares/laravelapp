@@ -2,8 +2,8 @@
 
 @section('title', 'Home')
 
-@section('content')
-    <style>
+@section('style')
+<style>
     /* #home {
     font-family: 'Niconne', cursive;
     } */
@@ -59,14 +59,14 @@
         color: #FFFFFF;
         font-family: 'Nunito', sans-serif;
         font-weight: 200;
-        height: 100vh;
+        /* height: 100vh; */
         margin: 0;
         background-image: url('https://img5.goodfon.com/wallpaper/nbig/1/45/citrus-oranges-fruits.jpg');
         background-size: cover;
     }
 
     .full-height {
-        height: 100vh;
+        /* height: 100vh; */
     }
 
     .flex-center {
@@ -106,7 +106,10 @@
     .m-b-md {
         margin-bottom: 30px;
     }            
-        </style>
+</style>
+@endsection
+
+@section('content')
     <div class="title m-b-md">Home</div>
     <div class="links">
         <a href="https://laravel.com/docs">Docs</a>
