@@ -9,14 +9,14 @@
         letter-spacing:2px;
     }
     
-    /* Centre the page */
+    /* Center the page */
     .body {
         display:block;
         margin:0 auto;
         width: auto;
     }
 
-    /* Centre the form within the page */
+    /* Center the form within the page */
     form {
         margin:0 auto;
         width: auto;
@@ -79,7 +79,6 @@
 
     textarea {
         height:213px;
-        /* background:url(images/textarea-bg.jpg) right no-repeat #efefef; */
     }
 
     input:focus, textarea:focus {
@@ -89,10 +88,8 @@
     #submit {
         width:127px;
         height:38px;
-        /* background:url(https://www.freepngimg.com/thumb/submit_button/25432-3-submit-button-file-thumb.png); */
         background-color:#FF7F50;
         color: #FFFFFF;
-        /* text-indent:-9999px; */
         border:none;
         margin-top:20px;
         cursor:pointer;
@@ -104,22 +101,22 @@
     #submit:hover {
         opacity:.9;
     }
-    
+
 </style>
 @endsection
 
 @section('content')
 
-    @if (session('status'))
-        <div class="alert alert-success">
-            {{ session('status') }}
-        </div>
-    @endif
-    @if (session('warning'))
-        <div class="alert alert-warning">
-            {{ session('warning') }}
-        </div>
-    @endif
+@if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
+@endif
+@if (session('warning'))
+    <div class="alert alert-warning">
+        {{ session('warning') }}
+    </div>
+@endif
 <section class="body">                       
     <form method="post" action="{{ route('contactus.store') }}">
         {{ csrf_field() }}
