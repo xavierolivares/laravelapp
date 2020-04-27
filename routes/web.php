@@ -17,14 +17,12 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/skills', function () {
+    return view('skills');
+});
+
 Route::get('/about', function () {
-    $name = 'Jungle';
-    $tasks = [
-        'Go to the store',
-        'Finish my screencast',
-        'Clean the house'
-    ];
-    return view('about', compact('tasks', 'name'));
+    return view('about');
 });
 
 Route::get('/contact', function () {

@@ -146,7 +146,7 @@
             10px 10px 15px rgba(0,0,0,0.5),
             -1px -1px 30px rgba(0,0,0,0.2);
             }
-            
+
         </style>
         @yield('style')
     </head>
@@ -156,7 +156,7 @@
             <!-- <img src="https://pngimage.net/wp-content/uploads/2018/06/orange-icon-png-3.png"> -->
             <!-- Navigation links (hidden by default) -->
             <div id="myLinks">
-                <a href="/">Skills</a>
+                <a href="/skills">Skills</a>
                 <a href="/contact">Contact</a>
                 <a href="/about">About</a>
             </div>
