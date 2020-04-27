@@ -82,13 +82,20 @@
             color: white;
             }
 
+            body {
+                min-height: 822px;
+                min-width: 330px;
+                margin-bottom: 100px;
+                clear: both;
+            }
+
             html, body {
                 background-color: #fff;
                 color: #FFFFFF;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
-                height: 100vh;
                 margin: 0;
+                height: 100vh;
                 /* background-image: url('https://img5.goodfon.com/wallpaper/nbig/1/45/citrus-oranges-fruits.jpg'); */
                 background-size: cover;
             }
