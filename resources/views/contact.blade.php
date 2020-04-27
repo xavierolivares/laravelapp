@@ -22,8 +22,9 @@
         width: auto;
     }
 
-    form h3, label {
+    form h1, label {
         color: #FF7F50;
+        font-weight: bold;
     }
 
     /* Style the text boxes */
@@ -40,6 +41,7 @@
         -webkit-border-radius:5px;
         border-radius:5px;
     }
+
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
         input, textarea {
@@ -79,9 +81,11 @@
         height:213px;
         /* background:url(images/textarea-bg.jpg) right no-repeat #efefef; */
     }
+
     input:focus, textarea:focus {
         border:1px solid #97d6eb;
     }
+
     #submit {
         width:127px;
         height:38px;
@@ -96,9 +100,11 @@
         10px 10px 15px rgba(0,0,0,0.5),
         -1px -1px 30px rgba(0,0,0,0.2);
     }
+
     #submit:hover {
         opacity:.9;
     }
+    
 </style>
 @endsection
 
@@ -117,7 +123,7 @@
 <section class="body">                       
     <form method="post" action="{{ route('contactus.store') }}">
         {{ csrf_field() }}
-        <h3>Contact</h3>
+        <h1>Contact</h1>
         <div>
             <div>
                 <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">

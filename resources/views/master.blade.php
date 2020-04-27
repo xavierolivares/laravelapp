@@ -96,8 +96,6 @@
                 font-weight: 200;
                 margin: 0;
                 height: 100vh;
-                /* background-image: url('https://img5.goodfon.com/wallpaper/nbig/1/45/citrus-oranges-fruits.jpg'); */
-                background-size: cover;
             }
 
             .full-height {
@@ -125,10 +123,6 @@
                 text-align: center;
             }
 
-            .title {
-                font-size: 84px;
-            }
-
             .links > a {
                 color: #FFFFFF;
                 padding: 0 25px;
@@ -152,6 +146,7 @@
             10px 10px 15px rgba(0,0,0,0.5),
             -1px -1px 30px rgba(0,0,0,0.2);
             }
+            
         </style>
         @yield('style')
     </head>
@@ -176,14 +171,14 @@
             </div>
         </div>
         <div class="footer links">
-                        <a href="https://laravel.com/docs">Docs</a>
-                        <a href="https://laracasts.com">Laracasts</a>
-                        <a href="https://laravel-news.com">News</a>
-                        <a href="https://blog.laravel.com">Blog</a>
-                        <a href="https://nova.laravel.com">Nova</a>
-                        <a href="https://forge.laravel.com">Forge</a>
-                        <a href="https://vapor.laravel.com">Vapor</a>
-                        <a href="https://github.com/laravel/laravel">GitHub</a>
+            <a href="https://laravel.com/docs">Docs</a>
+            <a href="https://laracasts.com">Laracasts</a>
+            <a href="https://laravel-news.com">News</a>
+            <a href="https://blog.laravel.com">Blog</a>
+            <a href="https://nova.laravel.com">Nova</a>
+            <a href="https://forge.laravel.com">Forge</a>
+            <a href="https://vapor.laravel.com">Vapor</a>
+            <a href="https://github.com/laravel/laravel">GitHub</a>
         </div>
     </body>
 </html>
