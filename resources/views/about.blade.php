@@ -2,20 +2,8 @@
 @section('title', 'About')
 
 @section('style')
-<style>
-    html, body {
-        background-image: url('https://images.shcdn.de/resized/w750/p/baumwolljersey-micro-streifenliebe-tuerkis--_11807-024_2.jpg');
-        background-size: cover;
-    }
-
-    .title {
-        font-size: 84px;
-    }
-
-    .m-b-md {
-        margin-bottom: 30px;
-    }            
-</style>
+<!-- About Style -->
+<link rel="stylesheet" type="text/css" href="{{ asset('css/about.css') }}">
 @endsection
 
 @section('content')
