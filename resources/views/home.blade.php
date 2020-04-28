@@ -2,31 +2,8 @@
 @section('title', 'Home')
 
 @section('style')
-<style>
-    html, body {
-        background-image: url('https://img5.goodfon.com/wallpaper/nbig/1/45/citrus-oranges-fruits.jpg');
-        background-size: cover;
-    }
-
-    .title {
-        font-size: 84px;
-    }
-
-    .links > a {
-        color: #FFFFFF;
-        padding: 0 25px;
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: .1rem;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
-    .m-b-md {
-        margin-bottom: 30px;
-    }            
-
-</style>
+<!-- Home Style -->
+<link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}">
 @endsection
 
 @section('content')
