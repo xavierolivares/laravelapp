@@ -105,7 +105,17 @@
 @endsection
 
 @section('content')
-<section class="body">                       
+<section class="body container contact-form">
+    @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+    @endif
+    @if (session('warning'))
+        <div class="alert alert-warning">
+            {{ session('warning') }}
+        </div>
+    @endif                  
     <form method="post" action="{{ route('contactus.store') }}">
         {{ csrf_field() }}
         <h1>Contact</h1>
@@ -129,17 +139,6 @@
                             </span>
                         @endif
                 </div>
-                <div class="form-group {{ $errors->has('subject') ? ' has-error' : '' }}">
-                    <label>Subject</label>
-                    <input type="text" name="subject" class="form-control" placeholder="Subject *"  />
-                    @if ($errors->has('subject'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('subject') }}</strong>
-                        </span>
-                    @endif
-                </div>
-            </div>
-            <div>
                 <div class="form-group {{ $errors->has('message') ? ' has-error' : '' }}">
                     <label>Message</label>
                     <textarea name="message" class="form-control" placeholder="Your Message *" required></textarea>
@@ -149,7 +148,6 @@
                         </span>
                     @endif
                 </div>
-            </div>
             <div class="form-group">
                 <input id="submit" type="submit" name="btnSubmit" class="btn btn-primary btn-round btn-sm" value="Send Message" />  
             </div>
