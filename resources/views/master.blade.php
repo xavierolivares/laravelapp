@@ -6,21 +6,20 @@
 
         <title>@yield('title')</title>
         @yield('head')
-        
+
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,600">
         <!-- Master Style -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/master.css') }}" >
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/master.css') }}">
+        @yield('style')
         <!-- Hamburger Menu -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Hamburger Functionality -->
         <script type="text/javascript" src="{{ asset('js/topnav.js') }}"></script>
-        @yield('style')
     </head>
     <body>
         <div class="topnav">
             <a id="home" href="/" class="active">freelancingweb.dev</a>
-            <!-- <img src="https://pngimage.net/wp-content/uploads/2018/06/orange-icon-png-3.png"> -->
             <!-- Navigation links (hidden by default) -->
             <div id="myLinks">
                 <a href="/skills">Skills</a>
