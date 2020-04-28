@@ -1,5 +1,5 @@
 @extends('master')
-@section('title', 'Skills')
+@section('title', 'Projects')
 
 @section('style')
 <style>
@@ -14,13 +14,12 @@
 
     .m-b-md {
         margin-bottom: 30px;
-    }
-    
+    }            
 </style>
 @endsection
 
 @section('content')
-<h1 class="title m-b-md">Skills</h1>
+<h1 class="title m-b-md">Projects</h1>
 <div class="links">
     <a href="https://laravel.com/docs">Docs</a>
     <a href="https://laracasts.com">Laracasts</a>

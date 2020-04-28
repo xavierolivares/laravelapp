@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Hamburger Functionality -->
         <script>
-            function myFunction() {
+            function topNavFunc() {
                 var x = document.getElementById("myLinks");
                 if (x.style.display === "block") {
                     x.style.display = "none";
@@ -19,7 +19,7 @@
                 }
             }
 
-            function topNavShutoff() {
+            function closeTopNav() {
                 var x = document.getElementById("myLinks");
                 if (x.style.display === "block") {
                     x.style.display = "none";
@@ -44,6 +44,10 @@
             /* Hide the links inside the navigation menu (except for logo/home) */
             .topnav #myLinks {
                 display: none;
+            }
+
+            #myLinks a {
+                font-size: 23px;
             }
 
             /* Style navigation menu links */
@@ -150,6 +154,7 @@
             <!-- Navigation links (hidden by default) -->
             <div id="myLinks">
                 <a href="/skills">Skills</a>
+                <a href="/projects">Projects</a>
                 <a href="/contact">Contact</a>
                 <a href="/about">About</a>
             </div>

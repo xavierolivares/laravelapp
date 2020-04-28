@@ -78,7 +78,7 @@
     }
 
     textarea {
-        height:213px;
+        height:150px;
     }
 
     input:focus, textarea:focus {
