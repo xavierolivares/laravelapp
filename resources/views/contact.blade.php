@@ -101,22 +101,10 @@
     #submit:hover {
         opacity:.9;
     }
-
 </style>
 @endsection
 
 @section('content')
-
-@if (session('status'))
-    <div class="alert alert-success">
-        {{ session('status') }}
-    </div>
-@endif
-@if (session('warning'))
-    <div class="alert alert-warning">
-        {{ session('warning') }}
-    </div>
-@endif
 <section class="body">                       
     <form method="post" action="{{ route('contactus.store') }}">
         {{ csrf_field() }}

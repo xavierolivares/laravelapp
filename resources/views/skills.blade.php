@@ -4,33 +4,17 @@
 @section('style')
 <style>
     html, body {
-        background-color: #fff;
-        color: #FFFFFF;
-        font-family: 'Nunito', sans-serif;
-        font-weight: 200;
-        height: 100vh;
-        margin: 0;
         background-image: url('https://images.shcdn.de/resized/w750/p/baumwolljersey-micro-streifenliebe-tuerkis--_11807-024_2.jpg');
+        background-size: cover;
     }
 
     .title {
         font-size: 84px;
     }
 
-    .links > a {
-        color: #FFFFFF;
-        padding: 0 25px;
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: .1rem;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
     .m-b-md {
         margin-bottom: 30px;
     }
-
 </style>
 @endsection
 
