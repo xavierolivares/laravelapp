@@ -81,6 +81,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Contact Form Reference Guide
 https://www.onlineinterviewquestions.com/blog/create-a-contact-form-in-laravel/
 http://tangledindesign.com/how-to-create-a-contact-form-using-html5-css3-and-php/
+https://stackoverflow.com/questions/21004310/in-laravel-the-best-way-to-pass-different-types-of-flash-messages-in-the-sessio
 
 ## Footer Reference
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fixed_footer

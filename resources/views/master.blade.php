@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Hamburger Functionality -->
         <script>
-            function myFunction() {
+            function clickTopNav() {
                 var x = document.getElementById("myLinks");
                 if (x.style.display === "block") {
                     x.style.display = "none";
@@ -19,7 +19,7 @@
                 }
             }
 
-            function topNavShutoff() {
+            function closeTopNav() {
                 var x = document.getElementById("myLinks");
                 if (x.style.display === "block") {
                     x.style.display = "none";
@@ -159,11 +159,11 @@
                 <a href="/about">About</a>
             </div>
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <a href="javascript:void(0);" class="icon" onclick="clickTopNav()">
             <i class="fa fa-bars"></i>
             </a>
         </div>
-        <div class="flex-center position-ref full-height" onclick="topNavShutoff()">
+        <div class="flex-center position-ref full-height" onclick="closeTopNav()">
             <div class="content">
                 @yield('content')
             </div>

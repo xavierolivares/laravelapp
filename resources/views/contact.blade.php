@@ -101,21 +101,18 @@
     #submit:hover {
         opacity:.9;
     }
+
+    .alert-success {
+        color: #FF7F50;
+        font-weight: bold;
+        font-size: 30px;
+        text-transform: uppercase;
+    }
 </style>
 @endsection
 
 @section('content')
 <section class="body container contact-form">
-    @if (session('status'))
-        <div class="alert alert-success">
-            {{ session('status') }}
-        </div>
-    @endif
-    @if (session('warning'))
-        <div class="alert alert-warning">
-            {{ session('warning') }}
-        </div>
-    @endif                  
     <form method="post" action="{{ route('contactus.store') }}">
         {{ csrf_field() }}
         <h1>Contact</h1>
@@ -153,5 +150,8 @@
             </div>
         </div>
     </form>
+    @if (Session::has('success'))
+        <p class="alert {{ Session::get('alert-class', 'alert-success') }}">{{ Session::get('success') }}</p>
+    @endif
 </section>
 @endsection
