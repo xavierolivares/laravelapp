@@ -39,8 +39,8 @@ class ContactUSController extends Controller {
             'email' => $request->get('email'),
             'user_message' => $request->get('message')
         ), function($message) use ($request) {
-            $message->from('xm.olivares@gmail.com');
-            $message->to('xm.olivares@gmail.com', 'Admin')->subject('freelancingwebdev contact form');
+            $message->from($_ENV['EMAIL']);
+            $message->to($_ENV['EMAIL'], 'Admin')->subject('FREELANCINGWEBDEV CONTACT FORM');
         });
 
         return back()->with('success', 'Thanks for contacting us!'); 
