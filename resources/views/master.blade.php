@@ -36,8 +36,8 @@
                 background-color: #333;
                 position: relative;
                 border-radius: 0 0 10px 10px;
-                box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
-            10px 10px 15px rgba(0,0,0,0.5),
+                box-shadow: 2px 2px 5px rgba(0,0,0,0.2),
+            10px 10px 15px rgba(0,0,0,0.3),
             -1px -1px 30px rgba(0,0,0,0.2);
             }
 
@@ -81,9 +81,9 @@
             }
 
             body {
-                min-height: 822px;
+                min-height: 500px;
                 min-width: 330px;
-                margin-bottom: 100px;
+                margin-bottom: 50px;
                 clear: both;
             }
 

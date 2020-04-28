@@ -22,6 +22,10 @@
         width: auto;
     }
 
+    h1 {
+        margin-top: 100px;
+    }
+
     form h1, label {
         color: #FF7F50;
         font-weight: bold;
@@ -32,9 +36,10 @@
         width:500px;
         height:27px;
         background:#efefef;
-        border:1px solid #dedede;
+        border:2px solid #FF7F50;
         padding:10px;
         margin-top:3px;
+        margin-bottom: 15px;
         font-size:0.9em;
         color:#3a3a3a;
         -moz-border-radius:5px;
@@ -91,15 +96,18 @@
         background-color:#FF7F50;
         color: #FFFFFF;
         border:none;
-        margin-top:20px;
         cursor:pointer;
-        box-shadow: -1px -1px 30px rgba(0,0,0,0.5), 2px 2px 5px rgba(0,0,0,0.5),
-        10px 10px 15px rgba(0,0,0,0.5),
+        box-shadow: -1px -1px 30px rgba(0,0,0,0.2), 2px 2px 5px rgba(0,0,0,0.2),
+        10px 10px 15px rgba(0,0,0,0.2),
         -1px -1px 30px rgba(0,0,0,0.2);
     }
 
     #submit:hover {
         opacity:.9;
+        background-color:#FFFFFF;
+        color: #FF7F50;
+        border:2px solid #97d6eb;
+        font-weight: bold;
     }
 
     .alert-success {
@@ -115,11 +123,11 @@
 <section class="body container contact-form">
     <form method="post" action="{{ route('contactus.store') }}">
         {{ csrf_field() }}
-        <h1>Contact</h1>
+        <h1>Have questions? Send us an email.</h1>
         <div>
             <div>
                 <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
-                    <label>Name</label>
+                    <!-- <label>Name</label> -->
                     <input type="text" name="name" class="form-control" placeholder="Your Name *"  required />
                     @if ($errors->has('name'))
                         <span class="help-block">
@@ -128,7 +136,7 @@
                     @endif
                 </div>
                 <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-                    <label>Email</label>
+                    <!-- <label>Email</label> -->
                     <input type="email" name="email" class="form-control" placeholder="Your Email *"  required />
                         @if ($errors->has('email'))
                             <span class="help-block">
@@ -137,7 +145,7 @@
                         @endif
                 </div>
                 <div class="form-group {{ $errors->has('message') ? ' has-error' : '' }}">
-                    <label>Message</label>
+                    <!-- <label>Message</label> -->
                     <textarea name="message" class="form-control" placeholder="Your Message *" required></textarea>
                     @if ($errors->has('message'))
                         <span class="help-block">
