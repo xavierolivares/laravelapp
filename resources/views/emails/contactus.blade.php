@@ -1,5 +1,5 @@
-<h1>FREELANCINGWEBDEV CONTACT FORM</h1>
-<p>Hello Admin, you received an email from : {{ $name }}</p>
+<h1>Contact Form</h1>
+<p>Hello Admin, you received an email from: {{ $name }}</p>
 <p>Here are their details:</p>
 <p>Name: {{ $name }}</p>
 <p>Email: {{ $email }}</p>
