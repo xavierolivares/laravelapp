@@ -37,7 +37,7 @@
                 @yield('content')
             </div>
         </div>
-        <div class="footer links">
+        <div class="footer">
             <div>
                 <a href="/skills">Skills</a>
                 <a href="/projects">Projects</a>

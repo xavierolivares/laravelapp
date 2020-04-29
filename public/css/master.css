@@ -87,7 +87,7 @@ html, body {
     text-align: center;
 }
 
-.links > a, .links div a {
+.footer div a {
     color: #FFFFFF;
     padding: 0 25px;
     font-size: 20px;
@@ -95,7 +95,7 @@ html, body {
     letter-spacing: .1rem;
     text-decoration: none;
     text-transform: uppercase;
-} 
+}
 
 .footer {
     position: fixed;
@@ -106,7 +106,6 @@ html, body {
     min-height: 23px;
     width: 100%;
     background-color: #FF6347;
-    color: white;
     text-align: center;
     border-radius: 10px 10px 0 0;
     box-shadow: -1px -1px 30px rgba(0,0,0,0.5), 
@@ -114,4 +113,13 @@ html, body {
         10px 10px 15px rgba(0,0,0,0.5),
         -1px -1px 30px rgba(0,0,0,0.2);
     flex-flow: column wrap;
+}
+
+.footer:hover {
+    background-color: white;
+    color: #FF6347;
+}
+
+.footer:hover div a {
+    color: #FF6347;
 }
