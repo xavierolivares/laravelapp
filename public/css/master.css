@@ -63,11 +63,11 @@ html, body {
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     margin: 0;
-    height: 100vh;
+    height: fit-content;
 }
 
 .full-height {
-    height: 100vh;
+    height: fit-content;
 }
 
 .flex-center {
