@@ -2,7 +2,9 @@
 .topnav {
     overflow: hidden;
     background-color: #333;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
     border-radius: 0 0 10px 10px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2),
         10px 10px 15px rgba(0,0,0,0.3),
@@ -69,6 +71,7 @@ html, body {
 }
 
 .flex-center {
+    padding-top: 69px;
     display: flex;
     justify-content: center;
 }
@@ -108,7 +111,7 @@ html, body {
 }
 
 .footer {
-    position: fixed;
+    position: inherit;
     padding-top: 20px;
     padding-bottom: 20px;
     left: 0;
