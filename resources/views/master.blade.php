@@ -19,7 +19,7 @@
     </head>
     <body>
         <div class="topnav">
-            <a id="home" href="/" class="active">freelancingweb.dev</a>
+            <a id="home" href="/" class="active">laravel test</a>
             <!-- Navigation links (hidden by default) -->
             <div id="myLinks">
                 <a href="/skills">Skills</a>
